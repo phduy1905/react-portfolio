@@ -1,0 +1,102 @@
+@import "./components/mixins";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --header-height: 60px;
+
+  --cl-light: #fff;
+  --cl-text: #303030;
+  --cl-dark: #2e2e2e;
+  --cl-darker: #141414;
+  --cl-primary: #14cfae;
+  --cl-priamary-alt: #79f2dd;
+
+  --fs-h1: 72px;
+  --fs-h2: 60px;
+  --fs-h3: 38px;
+  --fs-h4: 24px;
+  --fs-text: 18px;
+  --fs-small: 16px;
+
+  --ff-primary: "Source Sans Pro", sans-serif;
+  --ff-secondary: "Source Code Pro";
+
+  --lh-text: 1.6;
+  --lh-heading: 1;
+}
+
+@include tablet {
+  :root {
+    --fs-h1: 48px;
+    --fs-h2: 60px;
+    --fs-h3: 27px;
+    --fs-h4: 20px;
+    --fs-text: 18px;
+    --fs-small: 16px;
+  }
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ff-primary);
+  background-color: var(--cl-light);
+  color: var(--cl-text);
+  font-size: var(--ff-text);
+  line-height: var(--lh-text);
+  font-weight: 400;
+  margin-top: var(--header-height);
+  position: relative;
+}
+
+.container {
+  padding: 0 15px;
+  max-width: 960px;
+  width: 100%;
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.section {
+  padding: 105px 1rem;
+
+
+  &__title {
+    font-size: var(--fs-h2);
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  &__subtitle {
+    font-size: var(--fs-h4);
+    font-family: var(--ff-secondary);
+    display: inline-block;
+    background-color: var(--cl-primary);
+    padding: 0.5rem 0.1rem;
+  }
+
+  @include tablet {
+    padding: 60px 1rem;
+  }
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

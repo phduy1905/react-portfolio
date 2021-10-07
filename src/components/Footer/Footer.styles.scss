@@ -1,0 +1,47 @@
+@import "../mixins";
+
+.footer {
+    padding: 90px 1rem;
+    background-color: var(--cl-darker);
+    text-align: center;
+    font-weight: 700;
+    font-size: var(--fs-h4);
+
+    a {
+        color: var(--cl-primary);
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s;
+
+        &:hover {
+            color: #79f2dd;
+        }
+    }
+
+    &__mail {
+        margin-bottom: 4rem;
+        display: block;
+    }
+
+    &__socials-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 240px;
+        margin: 0 auto;
+        gap: 5rem;
+        justify-content: center;
+
+        @media screen and (max-width: 380px) {
+            max-width: 100%;
+            gap: 2rem;
+        }
+    }
+
+    &__socials-icon {
+        transition: all 0.3s;
+
+        &:hover {
+            fill: #79f2dd;
+        }
+    }
+}

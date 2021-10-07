@@ -1,0 +1,68 @@
+@import "../mixins";
+
+.services {
+    background-color: #30302F;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url("https://images.pexels.com/photos/574070/pexels-photo-574070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-position: center;
+    background-size: cover;
+    color: var(--cl-light);
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    @include tablet {
+        background-image: none;
+        background-color: #30302F;
+    }
+
+
+    .section__title--services {
+        margin-bottom: 80px;
+        position: relative;
+        color: var(--cl-primary);
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 2px;
+            background-color: var(--cl-light);
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__container {
+        display: flex;
+        max-width: 960px;
+        margin: 0 auto;
+        column-gap: 40px;
+
+        @include tablet {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__item {
+        max-width: 300px;
+        margin-bottom: 55px;
+    }
+
+    &__title {
+        font-size: var(--fs-h4);
+        margin-bottom: 20px;
+    }
+
+    &__btn {
+        background-color: var(--cl-primary);
+        font-size: 16px;
+        font-weight: 700;
+        text-decoration: none;
+        color: var(--cl-dark);
+        padding: 0.7rem 3rem;
+        transition: all 0.3s;
+    }
+}

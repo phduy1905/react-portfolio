@@ -1,0 +1,20 @@
+@import "../mixins";
+
+.header__bars {
+    display: none;
+
+    .bars {
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    @include tablet {
+        display: block;
+    }
+
+}
