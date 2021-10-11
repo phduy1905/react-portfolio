@@ -48,8 +48,8 @@ export const projectsList = [
     image_url: "https://i.imgur.com/ge6mzoS.png",
     title: "MNTN",
     desc: "A small responsive landing page for a tourist company.",
-    source: "https://phduy1905.github.io/mntn-landing-page/",
-    preview: "https://furniture-ecommerce-1905.netlify.app/",
+    source: "https://github.com/phduy1905/mntn-landing-page",
+    preview: "https://phduy1905.github.io/mntn-landing-page/",
   },
 
   {
